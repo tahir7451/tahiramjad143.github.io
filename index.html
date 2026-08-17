@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Tahir Amjad — Procurement &amp; Supply Chain Leader</title>
+<meta name="description" content="Muhammad Tahir Amjad — Senior Procurement Specialist with 12+ years across EPC, energy, and manufacturing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EAE6D9;
+    --paper-light:#F5F3EA;
+    --ink:#1C2B39;
+    --line:#B9C4C8;
+    --brass:#A9762F;
+    --teal:#3E6B72;
+    --ink-soft:#4A5B67;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  ::selection{background:var(--brass); color:var(--paper-light);}
+
+  .wrap{
+    max-width:980px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* background technical grid */
+  .grid-bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:44px 44px;
+    opacity:0.18;
+  }
+
+  a{color:var(--teal);}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal);
+    font-weight:500;
+  }
+
+  /* ---------- HEADER / TITLE BLOCK ---------- */
+  header{
+    padding:56px 0 0;
+  }
+  .titleblock{
+    border:1.5px solid var(--ink);
+    background:var(--paper-light);
+    position:relative;
+  }
+  .titleblock-main{
+    padding:34px 32px 26px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .name{
+    font-family:'Archivo', sans-serif;
+    font-weight:900;
+    font-size:clamp(32px, 5vw, 52px);
+    line-height:1.02;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+  }
+  .stamp{
+    width:104px;
+    height:104px;
+    border-radius:50%;
+    border:2px solid var(--brass);
+    color:var(--brass);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-weight:600;
+    transform:rotate(-9deg);
+    flex-shrink:0;
+    line-height:1.4;
+    padding:6px;
+  }
+
+  .titleblock-strip{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+  }
+  .tb-cell{
+    padding:14px 18px;
+    border-right:1.5px solid var(--ink);
+  }
+  .tb-cell:last-child{border-right:none;}
+  .tb-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+  }
+  .tb-value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    font-weight:600;
+  }
+  .tb-value a{color:var(--ink); text-decoration-color:var(--brass);}
+
+  @media (max-width:640px){
+    .titleblock-strip{grid-template-columns:repeat(2, 1fr);}
+    .tb-cell:nth-child(2){border-right:none;}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{
+    padding:64px 0;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:28px;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--brass);
+    font-size:14px;
+    font-weight:600;
+  }
+  h2{
+    font-family:'Archivo', sans-serif;
+    font-size:clamp(22px, 3vw, 30px);
+    font-weight:800;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .rule{
+    height:1.5px;
+    background:var(--ink);
+    opacity:0.85;
+    margin-top:14px;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in{
+    opacity:1;
+    transform:none;
+  }
+
+  /* ---------- PROFILE ---------- */
+  .scope-block{
+    border-left:3px solid var(--brass);
+    padding:4px 0 4px 22px;
+  }
+  .scope-block p{
+    margin:0 0 14px;
+    font-size:16.5px;
+    max-width:70ch;
+  }
+  .scope-block p:last-child{margin-bottom:0;}
+
+  /* ---------- EXPERIENCE / PIPELINE ---------- */
+  .pipeline{
+    position:relative;
+    padding-left:34px;
+  }
+  .pipeline::before{
+    content:"";
+    position:absolute;
+    left:9px;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    background:repeating-linear-gradient(var(--teal), var(--teal) 6px, transparent 6px, transparent 11px);
+  }
+  .role-item{
+    position:relative;
+    padding-bottom:42px;
+  }
+  .role-item:last-child{padding-bottom:0;}
+  .flange{
+    position:absolute;
+    left:-34px;
+    top:2px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--paper-light);
+    border:2.5px solid var(--teal);
+  }
+  .role-item.current .flange{
+    background:var(--brass);
+    border-color:var(--brass);
+    box-shadow:0 0 0 4px rgba(169,118,47,0.18);
+  }
+  .role-card{
+    background:var(--paper-light);
+    border:1px solid var(--line);
+    padding:22px 24px;
+    transition:border-color 0.2s ease, transform 0.2s ease;
+  }
+  .role-card:hover{
+    border-color:var(--brass);
+    transform:translateX(3px);
+  }
+  .role-top{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:8px 16px;
+    margin-bottom:4px;
+  }
+  .role-title{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:18px;
+  }
+  .role-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--teal);
+    font-weight:500;
+    white-space:nowrap;
+  }
+  .role-org{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+  }
+  .role-card ul{
+    margin:0;
+    padding-left:18px;
+  }
+  .role-card li{
+    margin-bottom:6px;
+    font-size:14.5px;
+  }
+  .role-card li:last-child{margin-bottom:0;}
+  .tag-current{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass);
+    border:1px solid var(--brass);
+    padding:2px 8px;
+    border-radius:2px;
+  }
+
+  /* ---------- KEY PROJECTS ---------- */
+  .datasheets{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+    gap:18px;
+  }
+  .datasheet{
+    background:var(--paper-light);
+    border:1px solid var(--line);
+    padding:20px 20px 18px;
+    position:relative;
+    transition:border-color 0.2s ease, transform 0.2s ease;
+  }
+  .datasheet:hover{
+    border-color:var(--brass);
+    transform:translateY(-3px);
+  }
+  .datasheet::before, .datasheet::after,
+  .ds-corner-tl, .ds-corner-br{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    border:1.5px solid var(--brass);
+  }
+  .datasheet::before{top:-1px; left:-1px; border-right:none; border-bottom:none;}
+  .datasheet::after{bottom:-1px; right:-1px; border-left:none; border-top:none;}
+  .ds-field-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+    margin-bottom:6px;
+  }
+  .ds-title{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    margin-bottom:10px;
+    line-height:1.3;
+  }
+  .ds-value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--brass);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .ds-desc{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  /* ---------- SKILLS / BOM ---------- */
+  .bom{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+    border-top:1px solid var(--ink);
+    border-left:1px solid var(--ink);
+  }
+  .bom-item{
+    border-right:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+    padding:13px 16px;
+    display:flex;
+    gap:12px;
+    align-items:baseline;
+    font-size:14px;
+    background:var(--paper-light);
+  }
+  .bom-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--brass);
+    font-weight:600;
+    flex-shrink:0;
+  }
+
+  /* ---------- EDUCATION / CERTS REGISTER ---------- */
+  table.register{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+  table.register th{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-align:left;
+    color:var(--teal);
+    padding:0 14px 10px 0;
+    border-bottom:1.5px solid var(--ink);
+    font-weight:600;
+  }
+  table.register td{
+    padding:12px 14px 12px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.register tr:last-child td{border-bottom:1.5px solid var(--ink);}
+  .reg-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:50px 0 70px;
+  }
+  .footer-block{
+    border:1.5px solid var(--ink);
+    padding:28px 30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    background:var(--paper-light);
+  }
+  .footer-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+  }
+  .footer-links{
+    display:flex;
+    gap:22px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+  .footer-links a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--brass);
+    padding-bottom:1px;
+  }
+  .footer-links a:hover{color:var(--brass);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    .role-card, .datasheet{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header>
+    <div class="titleblock">
+      <div class="titleblock-main">
+        <div>
+          <div class="name">Muhammad&nbsp;Tahir&nbsp;Amjad</div>
+          <div class="role">Senior Procurement Specialist — EPC · Energy · Manufacturing</div>
+        </div>
+        <div class="stamp">Verified<br>12+ Yrs<br>Experience</div>
+      </div>
+      <div class="titleblock-strip">
+        <div class="tb-cell">
+          <div class="tb-label">Based in</div>
+          <div class="tb-value">Lahore, Pakistan</div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Email</div>
+          <div class="tb-value"><a href="mailto:tahiramjad143@gmail.com">tahiramjad143@gmail.com</a></div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">LinkedIn</div>
+          <div class="tb-value"><a href="https://www.linkedin.com/in/muhammad-tahir-amjad-procurementmanagementprofessional/" target="_blank" rel="noopener">View Profile</a></div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Spend Managed</div>
+          <div class="tb-value">$10M+ / yr</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFILE -->
+  <section id="profile" class="reveal">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>Scope of Work</h2>
+    </div>
+    <div class="scope-block">
+      <p>Senior Procurement Specialist with 12+ years of experience across manufacturing, energy, oil &amp; gas, and EPC procurement. Skilled in end-to-end sourcing, category management, contract lifecycle management, supplier prequalification, negotiation, and ERP-based procurement (SAP&nbsp;MM).</p>
+      <p>Delivered 20% inventory cost reduction, 15% procurement efficiency gains, and managed $10M+ in annual spend across CAPEX and turnkey portfolios exceeding USD 780M and USD 220M. Mechanical Engineer by training, with hands-on experience spanning civil, mechanical, and electrical procurement categories, and direct leadership of procurement teams.</p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>Career Route</h2>
+    </div>
+    <div class="pipeline">
+
+      <div class="role-item current">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Senior Procurement Specialist</span>
+            <span class="role-dates">Jun 2026 — Present</span>
+          </div>
+          <div class="role-org">Mari Energies Limited · Daharki, Pakistan <span class="tag-current">Current</span></div>
+          <ul>
+            <li>Leading the complete local procurement function for the Daharki site, overseeing a portfolio with historical annual spend of ~PKR 297 million</li>
+            <li>Driving spend analysis, tail-end spend reduction, and supplier consolidation across operational and technical categories</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item current">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Subject Matter Consultant — Vendor Pre-Qualification</span>
+            <span class="role-dates">Nov 2025 — Present</span>
+          </div>
+          <div class="role-org">Bureau Veritas KSA · Remote <span class="tag-current">Current</span></div>
+          <ul>
+            <li>Leading technical, commercial, and contractual compliance reviews for Saudi Electric Company (SEC) manufacturers and service providers</li>
+            <li>Designed and implemented a vendor scoring &amp; prequalification framework across ~200 manufacturers and service providers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Consultant — Local &amp; Foreign Procurement</span>
+            <span class="role-dates">Apr 2023 — Nov 2025</span>
+          </div>
+          <div class="role-org">AMF Engineering &amp; Co. · Lahore, Pakistan</div>
+          <ul>
+            <li>Supported category procurement for HVAC/M&amp;E contracting, fabrication, and engineering projects, covering local and international sourcing</li>
+            <li>Formulated procurement and supply chain policies &amp; procedures from scratch</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Assistant Director — Projects Procurement</span>
+            <span class="role-dates">Dec 2020 — Mar 2023</span>
+          </div>
+          <div class="role-org">Water &amp; Power Development Authority (WAPDA) · Tarbela, Pakistan</div>
+          <ul>
+            <li>Led procurement planning, tendering strategy, and contract negotiations for hydropower CAPEX projects worth USD 780M, achieving cost savings of over 10%</li>
+            <li>Standardized procurement and contracting processes across the Tarbela-4 and Tarbela-5 project sites</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Senior Category Lead</span>
+            <span class="role-dates">Oct 2017 — Dec 2020</span>
+          </div>
+          <div class="role-org">Fatima Group · Lahore, Pakistan</div>
+          <ul>
+            <li>Led category-based procurement spanning direct technical categories (CAPEX, EPC) and indirect Business Support categories</li>
+            <li>Built a full procurement and contract governance framework for a USD 220M cement plant LSTK project</li>
+            <li>Provided functional leadership to a procurement team of up to 7 members</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role-item">
+        <div class="flange"></div>
+        <div class="role-card">
+          <div class="role-top">
+            <span class="role-title">Project Engineer</span>
+            <span class="role-dates">Jul 2014 — Oct 2017</span>
+          </div>
+          <div class="role-org">Fatima Group · Sadiqabad, Pakistan</div>
+          <ul>
+            <li>Led engineering reviews, site erection, and commissioning of Ammonia Revamp Projects (1,500 → 1,700 MTPD)</li>
+            <li>Evaluated equipment and piping metallurgy against ASME standards; trained and mentored junior engineers</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Key Projects</h2>
+    </div>
+    <div class="datasheets">
+
+      <div class="datasheet">
+        <div class="ds-field-label">Datasheet</div>
+        <div class="ds-title">Site Procurement Transformation &amp; Spend Optimization</div>
+        <div class="ds-value">Mari Energies · ~PKR 297M analyzed</div>
+        <p class="ds-desc">Restructured the local procurement cycle for the Daharki site across 830+ PRs, identifying consolidation and tail-end spend reduction opportunities.</p>
+      </div>
+
+      <div class="datasheet">
+        <div class="ds-field-label">Datasheet</div>
+        <div class="ds-title">Vendor Pre-Qualification &amp; Scoring Framework</div>
+        <div class="ds-value">Saudi Electricity Company (SEC)</div>
+        <p class="ds-desc">Structured prequalification and scoring framework for ~200 manufacturers and service providers, reviewed against ISO 9001/14001, API, and ASTM codes.</p>
+      </div>
+
+      <div class="datasheet">
+        <div class="ds-field-label">Datasheet</div>
+        <div class="ds-title">Procurement &amp; Governance Policy Development</div>
+        <div class="ds-value">Fatima Cement LSTK · USD 220M</div>
+        <p class="ds-desc">Defined procurement workflows, approval matrices, tendering procedures, and supplier governance for a lump-sum turnkey cement plant project.</p>
+      </div>
+
+      <div class="datasheet">
+        <div class="ds-field-label">Datasheet</div>
+        <div class="ds-title">Natural Gas Booster Compressor (NGBC) Train</div>
+        <div class="ds-value">End-to-End Procurement · USD 10M</div>
+        <p class="ds-desc">Managed RFQ development, techno-commercial evaluation, negotiation, and contract finalization, optimizing total cost of ownership.</p>
+      </div>
+
+      <div class="datasheet">
+        <div class="ds-field-label">Datasheet</div>
+        <div class="ds-title">Mega Infrastructure Procurement</div>
+        <div class="ds-value">Tarbela Hydropower · USD 780M+</div>
+        <p class="ds-desc">Procurement planning, tendering, and contract administration across the Tarbela-4 and Tarbela-5 hydropower projects.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS / BOM -->
+  <section id="skills" class="reveal">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2>Bill of Materials — Skills</h2>
+    </div>
+    <div class="bom">
+      <div class="bom-item"><span class="bom-num">01</span>Strategic Sourcing &amp; Category Management</div>
+      <div class="bom-item"><span class="bom-num">02</span>Contract Lifecycle Management</div>
+      <div class="bom-item"><span class="bom-num">03</span>Tendering (RFQ/RFP) &amp; Negotiation</div>
+      <div class="bom-item"><span class="bom-num">04</span>Supplier Prequalification &amp; Evaluation</div>
+      <div class="bom-item"><span class="bom-num">05</span>Cost Optimization &amp; TCO</div>
+      <div class="bom-item"><span class="bom-num">06</span>Spend Analysis &amp; Reporting</div>
+      <div class="bom-item"><span class="bom-num">07</span>SAP MM / ERP Systems</div>
+      <div class="bom-item"><span class="bom-num">08</span>EPC / CAPEX Procurement</div>
+      <div class="bom-item"><span class="bom-num">09</span>Team Leadership &amp; Mentoring</div>
+      <div class="bom-item"><span class="bom-num">10</span>Risk &amp; Compliance (ISO 9001)</div>
+      <div class="bom-item"><span class="bom-num">11</span>Civil, Mechanical &amp; Electrical Procurement</div>
+      <div class="bom-item"><span class="bom-num">12</span>Vendor Development</div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section id="credentials" class="reveal">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2>Credential Register</h2>
+    </div>
+    <table class="register">
+      <thead>
+        <tr><th>Date</th><th>Credential</th><th>Issuer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="reg-date">2024</td><td>M.Sc. Mechanical Engineering</td><td>University of Engineering &amp; Technology, Lahore</td></tr>
+        <tr><td class="reg-date">2014</td><td>B.Sc. Mechanical Engineering</td><td>University of Engineering &amp; Technology, Lahore</td></tr>
+        <tr><td class="reg-date">2022</td><td>ISO 9001:2015 Internal Auditor</td><td>WAPDA Academy</td></tr>
+        <tr><td class="reg-date">2019</td><td>Contract Management (Professional Training)</td><td>Fatima Group</td></tr>
+        <tr><td class="reg-date">2017</td><td>Finance for Non-Finance Managers</td><td>Fatima Group</td></tr>
+        <tr><td class="reg-date">2016</td><td>HAZOP / HAZID &amp; Risk Management Workshop</td><td>Fatima Group</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="reveal">
+    <div class="footer-block">
+      <div class="footer-note">DOC: TAHIR-AMJAD-PROFILE &nbsp;·&nbsp; REV: 2026 &nbsp;·&nbsp; SHEET 1 OF 1</div>
+      <div class="footer-links">
+        <a href="mailto:tahiramjad143@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/muhammad-tahir-amjad-procurementmanagementprofessional/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
